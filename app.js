@@ -13,7 +13,7 @@ dest: __dirname + '/uploads'
 });
 
 //connexion à la BDD
-mongoose.connect('mongodb://localhost/dealabs'); 
+mongoose.connect('mongodb://localhost/dealabs', { useNewUrlParser: true }); 
 
 //définir les différents model
 //require('./models/Deal');
