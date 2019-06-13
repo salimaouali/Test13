@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="container">
+
+
+  <div class="row">
+
+    <div class="col-sm">
+      <img src="/uploads/{{deal.picture}}" alt="{{deal.name}}" style="width: 100%">
+    </div>
+
+    <div class="col-sm">
+      {{deal.name}} 
+    </div>
+    <div class="col-sm">
+      {{deal.prix}} €
+    </div>
+    <div class="col-sm">
+      {{deal.dateFin}}
+    </div>
+    <div class="col-sm">
+      {{deal.description}}
+    </div>  
+    
+    <div class="col-sm">
+     <a href="{{deal.lien}}">
+      <h5 class="text-center">Cliquer ici pour accéder à l'article</h5>
+    </div>
+    
+  </div>
+</div>
+
+    <div>
+  <a href="/edit/{{deal._id}}" class="btn btn-primary"> voir le deal</a>
+  <a href="/delete/{{deal._id}}" class="btn btn-danger"> Supprimer le deal</a>
+     </div> 
+
+
+{% endblock %}

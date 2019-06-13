@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<a href="/new" class="btn btn-primary"> Ajouter un deal</a>
+
+
+	<h2 class="text-center">Deals</h2>
+
+	
+	
+
+	{% for p in deals %}
+<table class="table">	
+<tbody> 
+  
+    <tr>
+      <th scope="row"></th>
+      <td><a href="/{{p._id}}"> {{p.name}} </a></td>
+      <td> {{p.prix}} €</td>
+      <td>Expire le : {{p.dateFin}} </td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+
+		 {% endfor %}
+
+{% endblock %}
